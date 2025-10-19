@@ -5,10 +5,9 @@
   "main": "dist/index.js",
   "type": "module",
 	"scripts": {
-		"dev": "tsx watch src/index.ts",
 		"build": "tsc -p tsconfig.json",
-		"start": "node dist/index.js",
-		"deploy-commands": "tsx src/deploy-commands.ts"
+		"start": "npm run build && node dist/index.js",
+		"dev": "tsx watch src/index.ts"
 	},
   "repository": {
     "type": "git",
