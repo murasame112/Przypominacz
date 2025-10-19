@@ -11,6 +11,5 @@ export async function getFirstArticleAnchors(url: string) {
   const anchors = firstArticle.find('header h3 a').toArray();
 
   const texts = anchors.map(a => $(a).text().trim()).filter(Boolean);
-
   return { texts };
 }
