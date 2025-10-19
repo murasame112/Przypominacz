@@ -2,6 +2,12 @@ import 'dotenv/config';
 import fs from 'fs';
 import path from 'path';
 import { Client, GatewayIntentBits } from 'discord.js';
+import express from "express";
+const app = express();
+
+app.get("/", (req, res) => res.send("Bot działa, o Najłaskawszy!"));
+app.listen(3000, () => console.log("Serwer keep-alive nasłuchuje na porcie 3000"));
+
 
 const TOKEN = process.env.BOT_TOKEN!;
 if (!TOKEN) {
